@@ -1,0 +1,63 @@
+\documentclass[12pt]{report}
+
+\usepackage[titletoc]{appendix}
+\usepackage[danish]{babel} % For Danish writing.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, margin=4cm]{geometry} % margins.
+
+\usepackage{verbatim}
+\usepackage{float}
+
+% Adds support for full page background picture
+\usepackage[contents={},color=gray]{background}
+\usepackage{setspace}
+\usepackage{rotating}
+\usepackage{caption}
+
+\usepackage{xcolor}
+\definecolor{aaublue}{RGB}{33,26,82}% dark blue
+\definecolor{bg}{HTML}{f2f2f2}
+
+%\usepackage[pdftex]{graphicx} % For pictures.
+
+\usepackage{amssymb,amsmath,amsthm,amsfonts} % Math.
+
+% Styling of Code Blocks
+\usepackage{minted}
+\usemintedstyle{emacs}
+\setminted{
+    frame=leftline,
+    framesep=2mm,
+    baselinestretch=1.2,
+    fontsize=\footnotesize,
+    bgcolor=bg,
+    linenos=true,
+    tabsize=1,
+    obeytabs=true,
+    mathescape=true,
+    breaklines
+}
+
+\usepackage{hyperref}
+
+\usepackage{lastpage} %Bruge til at få sidetal fra sidste side
+\usepackage{calc} % Reset counter after title page.
+
+% Bibliografi
+\usepackage{csquotes} 
+\usepackage[backend=biber, sorting=none]{biblatex}
+\bibliography{bib.bib}
+\usepackage[nottoc,numbib]{tocbibind}
+
+% Noter i dokument
+\setlength{\marginparwidth}{3.5cm}
+\usepackage{todonotes}
+\linespread{1.25}
+
+% Ændr titel på indholdfortegnelse
+\addto\captionsdanish{\renewcommand{\contentsname}{Indholdsfortegnelse}}
+
+% the numbers mason, what do they mean?
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
